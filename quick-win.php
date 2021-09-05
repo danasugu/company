@@ -17,6 +17,6 @@ $results = $db_connection->query($query);
 $db_connection = NULL;
 
 foreach($results as $result){
-  echo $result['firstName'];
+  echo $result['email'];
   echo "<br>";
 }
