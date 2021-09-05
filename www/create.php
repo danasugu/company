@@ -6,7 +6,8 @@ $results = $db_connection->query($query);
 //close db connection
 $db_connection = NULL;
 
-foreach($results as $result){
-  echo $result['email'];
-  echo "<br>";
+try{
+  $db_connection = new PDO ($dns, $db_username, $db_password);
+}catch (Exception $e) {
+  echo 'there was a failure';
 }
