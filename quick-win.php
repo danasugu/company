@@ -13,3 +13,10 @@ $db_connection = new PDO($dsn, $db_username, $db_password);
 $query = "SELECT * FROM user";
 //run that $query
 $results = $db_connection->query($query);
+//close db connection
+$db_connection = NULL;
+
+foreach($results as $result){
+  echo $result['fisrtName'];
+  echo "<br>";
+}
