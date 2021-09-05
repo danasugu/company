@@ -8,3 +8,7 @@ $db_password='';
 $dsn = "mysql:host=$db_host; dbname=$db_name";
 
 $db_connection = new PDO($dsn, $db_username, $db_password);
+
+$query = "SELECT * FROM user";
+
+$results = $db_connection->query($query);
